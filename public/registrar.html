@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registrar producto</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="contenedor">
+
+    <h1>Registrar producto</h1>
+    <p class="descripcion">Ingrese los datos del producto para registrar</p>
+    <div class="tarjeta">
+      <form id="formulario_registro">
+        <label for="select_grupo">Grupo</label>
+        <select id="select_grupo" required>
+          <option value="">Cargando...</option>
+        </select>
+
+        <label for="input_nombre_producto">Nombre del producto</label>
+        <input id="input_nombre_producto" maxlength="120" placeholder="Ejemplo: Manzana" required>
+
+        <label for="input_precio_kilo">Precio por kilo (S/)</label>
+        <input id="input_precio_kilo" type="number" step="0.01" min="0.01" placeholder="Ejemplo: 2.50" required>
+
+        <div class="fila_botones">
+          <button type="submit">Guardar</button>
+          <a class="boton_secundario" href="./listar.html">Listar</a>
+        </div>
+      </form>
+
+      <p id="mensaje"></p>
+    </div>
+  </div>
+
+  <script src="./registrar.js"></script>
+</body>
+</html>

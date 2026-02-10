@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Listar productos</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Listar y editar productos</h1>
+    <p class="descripcion">Seleccione “Editar” para actualizar un producto</p>
+
+    <div class="tarjeta">
+      <form id="formulario_edicion">
+        <input type="hidden" id="input_id_producto">
+
+        <label for="select_grupo_edicion">Grupo</label>
+        <select id="select_grupo_edicion"></select>
+
+        <label for="input_nombre_edicion">Nombre del producto</label>
+        <input id="input_nombre_edicion" maxlength="120">
+
+        <label for="input_precio_edicion">Precio por kilo (S/)</label>
+        <input id="input_precio_edicion" type="number" step="0.01" min="0.01">
+
+        <div class="fila_botones">
+          <button type="submit">Actualizar</button>
+          <button type="button" class="boton_secundario" id="boton_cancelar">Cancelar</button>
+          <a class="boton_secundario" href="./registrar.html">Registrar</a>
+        </div>
+      </form>
+
+      <p id="mensaje_listado"></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Grupo</th>
+            <th>Precio/Kg</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo_tabla_productos">
+          <tr><td colspan="5">Cargando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="./listar.js"></script>
+</body>
+</html>
