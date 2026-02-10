@@ -110,7 +110,7 @@ formulario_edicion.addEventListener("submit", async (e) => {
   const resultado = await respuesta.json();
   if (!respuesta.ok) return mostrar_mensaje_listado(resultado.error || "Error al actualizar.");
 
-  mostrar_mensaje_listado("✅ Producto actualizado", true);
+  mostrar_mensaje_listado("Producto actualizado", true);
   boton_cancelar.click();
   listar_productos();
 });
